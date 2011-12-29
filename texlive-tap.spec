@@ -18,9 +18,6 @@ BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
 Requires(post):	texlive-kpathsea
-Conflicts:	texlive-texmf <= 20110705-3
-Conflicts:	texlive-doc <= 20110705-3
-Conflicts:	texlive-source <= 20110705-3
 
 %description
 The package offers a simple notation for pretty complex tables
@@ -29,20 +26,12 @@ allows shaded/coloured tables, diagonal rules, etc. The package
 is supposed to work with both Plain and LaTeX. An AWK converter
 from ASCII semigraphic tables to TAP notation is included.
 
-%pre
-    %_texmf_mktexlsr_pre
-
 %post
-    %_texmf_mktexlsr_post
-
-%preun
-    if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_pre
-    fi
+    %{_sbindir}/texlive.post
 
 %postun
     if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_post
+	%{_sbindir}/texlive.post
     fi
 
 #-----------------------------------------------------------------------
@@ -74,7 +63,6 @@ from ASCII semigraphic tables to TAP notation is included.
 %doc %{_texmfdistdir}/source/generic/tap/tabcv/sampdos/tcv.bat
 %doc %{_texmfdistdir}/source/generic/tap/tabcv/sampdos/tcv_.bat
 %doc %{_texmfdistdir}/source/generic/tap/tabcv/tapcv.awk
-%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -85,5 +73,3 @@ from ASCII semigraphic tables to TAP notation is included.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
-mkdir -p %{buildroot}%{_tlpkgobjdir}
-cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
