@@ -1,12 +1,12 @@
-# revision 15878
+# revision 31731
 # category Package
 # catalog-ctan /macros/generic/tables/tap077.zip
-# catalog-date 2009-10-10 00:51:28 +0200
+# catalog-date 2012-06-22 13:21:57 +0200
 # catalog-license pd
 # catalog-version 0.77
 Name:		texlive-tap
 Version:	0.77
-Release:	2
+Release:	3
 Summary:	TeX macros for typesetting complex tables
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/generic/tables/tap077.zip
@@ -38,11 +38,28 @@ from ASCII semigraphic tables to TAP notation is included.
 %files
 %{_texmfdistdir}/tex/generic/tap/tap.tex
 %doc %{_texmfdistdir}/doc/generic/tap/0README.TAP
-%doc %{_texmfdistdir}/doc/generic/tap/0tabdoc.inf
+%doc %{_texmfdistdir}/doc/generic/tap/0tapdoc.inf
 %doc %{_texmfdistdir}/doc/generic/tap/circ.eps
 %doc %{_texmfdistdir}/doc/generic/tap/circmag.eps
+%doc %{_texmfdistdir}/doc/generic/tap/epsfx.tex
 %doc %{_texmfdistdir}/doc/generic/tap/tapanch.100
 %doc %{_texmfdistdir}/doc/generic/tap/tapanch.mp
+%doc %{_texmfdistdir}/doc/generic/tap/tapcv/sampdos/0sampdos.inf
+%doc %{_texmfdistdir}/doc/generic/tap/tapcv/sampdos/post1.tex
+%doc %{_texmfdistdir}/doc/generic/tap/tapcv/sampdos/post2.tex
+%doc %{_texmfdistdir}/doc/generic/tap/tapcv/sampdos/prea1.tex
+%doc %{_texmfdistdir}/doc/generic/tap/tapcv/sampdos/prea2.tex
+%doc %{_texmfdistdir}/doc/generic/tap/tapcv/sampdos/prea3.tex
+%doc %{_texmfdistdir}/doc/generic/tap/tapcv/sampdos/tapcv0.raw
+%doc %{_texmfdistdir}/doc/generic/tap/tapcv/sampdos/tapcv1.raw
+%doc %{_texmfdistdir}/doc/generic/tap/tapcv/sampdos/tapcv2.raw
+%doc %{_texmfdistdir}/doc/generic/tap/tapcv/sampdos/tapcv3.raw
+%doc %{_texmfdistdir}/doc/generic/tap/tapcv/sampdos/tapcv4.raw
+%doc %{_texmfdistdir}/doc/generic/tap/tapcv/sampdos/tapcv5.raw
+%doc %{_texmfdistdir}/doc/generic/tap/tapcv/sampdos/tapcv6.raw
+%doc %{_texmfdistdir}/doc/generic/tap/tapcv/sampdos/tcv.bat
+%doc %{_texmfdistdir}/doc/generic/tap/tapcv/sampdos/tcv_.bat
+%doc %{_texmfdistdir}/doc/generic/tap/tapcv/tapcv.awk
 %doc %{_texmfdistdir}/doc/generic/tap/tapdoc.tex
 %doc %{_texmfdistdir}/doc/generic/tap/tapxamp1.tex
 %doc %{_texmfdistdir}/doc/generic/tap/tapxamp2.tex
@@ -73,16 +90,3 @@ from ASCII semigraphic tables to TAP notation is included.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 0.77-2
-+ Revision: 756511
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 0.77-1
-+ Revision: 719655
-- texlive-tap
-- texlive-tap
-- texlive-tap
-
