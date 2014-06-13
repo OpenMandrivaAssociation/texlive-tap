@@ -6,7 +6,7 @@
 # catalog-version 0.77
 Name:		texlive-tap
 Version:	0.77
-Release:	7
+Release:	8
 Summary:	TeX macros for typesetting complex tables
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/generic/tables/tap077.zip
