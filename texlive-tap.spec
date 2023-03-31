@@ -1,6 +1,6 @@
 Name:		texlive-tap
 Version:	31731
-Release:	1
+Release:	2
 Summary:	TeX macros for typesetting complex tables
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/generic/tables/tap077.zip
