@@ -3,7 +3,7 @@ Version:	31731
 Release:	2
 Summary:	TeX macros for typesetting complex tables
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/generic/tables/tap077.zip
+URL:		https://www.ctan.org/tex-archive/macros/generic/tables/tap077.zip
 License:	PD
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/tap.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/tap.doc.r%{version}.tar.xz
